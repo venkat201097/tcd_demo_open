@@ -353,7 +353,7 @@ onclick = "writeData('fileWriteAudio.php','targetDiv1')" disabled class="btn btn
             var temp = chin_data.split("\n");
         else
             var temp = eng_data.split('\n');
-        ntrial = 5
+        ntrial = 10
         console.log(temp[0])
         temp.pop(); //removes last element "/n"                
         var temp_0;
@@ -368,7 +368,7 @@ onclick = "writeData('fileWriteAudio.php','targetDiv1')" disabled class="btn btn
         }
         // shuffle the list (paired with the key) into two arrays
         test_indices = shuffle_range(0,temp.length-1);
-        for(var i=0;i<5;i++){
+        for(var i=0;i<10;i++){
             //files_set_ref.push(temp_1[0]);
             files_set_test.push(temp_1[test_indices[i]]);
             files_set_key.push(temp_2[test_indices[i]]);
@@ -459,7 +459,7 @@ onclick = "writeData('fileWriteAudio.php','targetDiv1')" disabled class="btn btn
         idNumber.currentTime = 0; // Set the time back to zero
         document.getElementById("play").disabled = true; // enable play button
 
-        if (trial==(ntrial-1)){
+        if (trial==(ntrial)){
             if(langsdone==0){
                 langsdone+=1;
                 if(curr_lang=='e'){
